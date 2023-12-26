@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image with Attributes</title>
+</head>
+<body>
+<img src="image.jpg"
+     alt="Image description"
+     width="300px"
+     height="200px"
+     ismap
+     usemap="#my-image-map"
+     sizes="(max-width: 600px) 100%, 800px"
+     srcset="image-small.jpg 200w, image-medium.jpg 400w, image-large.jpg 800w"
+     referrerpolicy="no-referrer"
+     longdesc="Image long description"
+     loading="lazy"
+     crossorigin="anonymous">
+
+<map name="my-image-map" id="my-image-map">
+    <area href="https://www.example.com/" shape="rect" coords="0,0,100,100" alt="Image hotspot 1">
+    <area href="https://www.example.com/about/" shape="rect" coords="100,0,200,100" alt="Image hotspot 2">
+    <area href="https://www.example.com/contact/" shape="rect" coords="200,0,300,100" alt="Image hotspot 3">
+</map>
+</body>
+</html>

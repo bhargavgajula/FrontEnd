@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+  <link rel = "stylesheet" href = "table_spi.css">
+  <style>
+    table th , td{
+      border: 1px solid black;
+      padding:20px;
+    }
+    </style>
+</head>
+<body>
+<table>
+  <header>
+    <tr style="width: 500px">
+      <th style="background: aqua">Student</th>
+      <th style="background: aqua">Details</th>
+    </tr>
+  </header>
+  <tr>
+    <th>Name</th>
+    <td>enter your name</td>
+  </tr>
+  <tr>
+    <th>Branch</th>
+    <td>enter your branch</td>
+  </tr>
+  <tr>
+    <th>Roll No</th>
+    <td>enter your roll no</td>
+  </tr>
+  <tr>
+    <th>city</th>
+    <td>enter your city</td>
+  </tr>
+  <tr>
+    <th>DOB</th>
+    <td>enter your dob</td>
+  </tr>
+  <tr>
+    <th>CGPA</th>
+    <td>enter your cgpa</td>
+  </tr>
+  <tr >
+    <th onclick="openSGPATable()" style="color: red ; cursor: pointer">SGPA</th>
+    <td>enter your sgpa</td>
+  </tr>
+</table>
+
+<script>
+  function openSGPATable() {
+    var sgpaTable = window.open("", "SGPATable", "width=400,height=400");
+
+    // HTML content for the new table
+    var sgpaTableContent = `
+             <style>
+    table th , td{
+      border: 1px solid black;
+      padding:20px;
+    }
+    </style>
+              <table>
+                  <tr>
+                      <th style="background: aqua">Year</th>
+                      <th style="background: aqua">SGPA</th>
+                  </tr>
+                  <tr>
+                      <td style="background: aqua">1st year</td>
+                      <td>Enter SGPA</td>
+                  </tr>
+                  <tr>
+                      <td style="background: aqua">2nd year</td>
+                      <td>placeholder="Enter SGPA</td>
+                  </tr>
+                  <tr>
+                      <td style="background: aqua">3rd year</td>
+                      <td>Enter SGPA</td>
+                  </tr>
+                  <tr>
+                      <td style="background: aqua">4th year</td>
+                      <td>Enter SGPA</td>
+                  </tr>
+              </table>
+        `;
+
+    // Set the content of the new window
+    sgpaTable.document.body.innerHTML = sgpaTableContent;
+  }
+</script>
